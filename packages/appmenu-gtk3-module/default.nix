@@ -32,6 +32,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     meson
     glib
+    gnused
     cmake
     pkg-config
     systemd
