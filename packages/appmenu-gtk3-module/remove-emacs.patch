@@ -1,0 +1,16 @@
+diff --git a/src/blacklist.c b/subprojects/appmenu-gtk-module/src/blacklist.c
+index 3bbc94a..551878c 100644
+--- a/src/blacklist.c
++++ b/src/blacklist.c
+@@ -28,11 +28,6 @@
+ #include "consts.h"
+ 
+ static const char *const BLACKLIST[] = { "acroread",
+-	                                 "emacs",
+-	                                 "emacs23",
+-	                                 "emacs23-lucid",
+-	                                 "emacs24",
+-	                                 "emacs24-lucid",
+ 	                                 "budgie-panel",
+ 	                                 "mate-panel",
+ 	                                 "mate-menu",
