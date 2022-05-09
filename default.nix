@@ -1,12 +1,8 @@
-with import <nixpkgs> { overlays = [(import ./overlay.nix)]; };
+self: super:
 
-stdenv.mkDerivation {
-  name = "env";
-
-  nativeBuildInputs = [ glib ];
-  buildInputs = [ appmenu-gtk3-module ];
-
-  shellHook = ''
-    export XDG_DATA_DIRS=$XDG_DATA_DIRS:${appmenu-gtk3-module}/share/gsettings-schemas/appmenu-gtk3-module-0.7.6
-  '';
+let
+  inherit (super) callPackage;
+in
+{
+  appmenu-gtk3-module = callPackage ./packages/appmenu-gtk3-module { inherit (super); };
 }
