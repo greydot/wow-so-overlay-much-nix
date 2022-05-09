@@ -4,6 +4,7 @@
 , fetchpatch
 , meson
 , cmake
+, gnused
 , pkg-config
 , systemd
 , gtk-doc
