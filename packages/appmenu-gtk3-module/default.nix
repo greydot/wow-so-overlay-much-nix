@@ -4,7 +4,6 @@
 , fetchpatch
 , meson
 , cmake
-, gnused
 , pkg-config
 , systemd
 , gtk-doc
@@ -28,12 +27,14 @@ stdenv.mkDerivation rec {
     sha256 = "sha256:1ywpygjwlbli65203ja2f8wwxh5gbavnfwcxwg25v061pcljaqmm";
   };
 
+  patches = [
+    ./remove-emacs.patch
+  ];
   sourceRoot = "source/subprojects/appmenu-gtk-module";
 
   nativeBuildInputs = [
     meson
     glib
-    gnused
     cmake
     pkg-config
     systemd
@@ -49,7 +50,6 @@ stdenv.mkDerivation rec {
   ];
 
   preConfigure = ''
-    sed -i '/emacs/d' src/blacklist.c
     substituteInPlace meson_options.txt --replace "value: ['2','3']" "value: ['3']"
   '';
 
