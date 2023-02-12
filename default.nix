@@ -8,9 +8,9 @@ let
 in
 {
   appmenu-gtk3-module = callPackage ./packages/appmenu-gtk3-module { inherit (super); };
-  haskell = super.haskell // {
-    packages = super.haskell.packages // {
-      ghc925 = super.haskell.packages.ghc925.extend haskellOverlay;
-    };
-  };
+#  haskell = super.haskell // {
+#    packages = super.haskell.packages // {
+#      ghc925 = super.haskell.packages.ghc925.extend haskellOverlay;
+#    };
+#  };
 }
