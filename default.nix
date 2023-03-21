@@ -14,6 +14,7 @@ in
     packages = super.haskell.packages // {
       ghc902 = super.haskell.packages.ghc902.extend haskellOverlay;
       ghc925 = super.haskell.packages.ghc925.extend haskellOverlay;
+      ghc927 = super.haskell.packages.ghc927.extend haskellOverlay;
     };
   };
 }
