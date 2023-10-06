@@ -9,6 +9,7 @@ let
   };
 in
 {
+  applet-window-appmenu = super.libsForQt5.callPackage ./packages/applet-window-appmenu { inherit (libsForQt5); };
   appmenu-gtk3-module = callPackage ./packages/appmenu-gtk3-module { inherit (super); };
   haskell = super.haskell // {
     packages = super.haskell.packages // {
