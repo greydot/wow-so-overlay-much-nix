@@ -1,7 +1,6 @@
 { lib
 , mkDerivation
 , fetchFromGitHub
-, fetchpatch
 , cmake
 , extra-cmake-modules
 , kcoreaddons
@@ -12,6 +11,7 @@
 , libSM
 , qtx11extras
 , kwindowsystem
+, libdbusmenu
 }:
 
 mkDerivation rec {
@@ -39,6 +39,7 @@ mkDerivation rec {
     plasma-workspace
     libSM
     qtx11extras
+    libdbusmenu
   ];
 
   meta = with lib; {
